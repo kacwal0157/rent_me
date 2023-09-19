@@ -16,12 +16,12 @@ TextTheme lightTextTheme = const TextTheme(
       fontSize: 32.0,
       color: Colors.black,
       fontWeight: FontWeight.bold),
-  // bodySmall:
-  //     TextStyle(fontFamily: 'Poppins', fontSize: 16.0, color: Colors.black),
-  // bodyMedium:
-  //     TextStyle(fontFamily: 'Poppins', fontSize: 24.0, color: Colors.black),
-  // bodyLarge:
-  //     TextStyle(fontFamily: 'Poppins', fontSize: 32.0, color: Colors.black),
+  bodySmall:
+      TextStyle(fontFamily: 'OpenSans', fontSize: 16.0, color: Colors.black),
+  bodyMedium:
+      TextStyle(fontFamily: 'OpenSans', fontSize: 24.0, color: Colors.black),
+  bodyLarge:
+      TextStyle(fontFamily: 'OpenSans', fontSize: 32.0, color: Colors.black),
 );
 TextTheme darkTextTheme = const TextTheme(
   headlineSmall: TextStyle(
@@ -39,10 +39,10 @@ TextTheme darkTextTheme = const TextTheme(
       fontSize: 32.0,
       color: Colors.white,
       fontWeight: FontWeight.bold),
-  // bodySmall:
-  //     TextStyle(fontFamily: 'Poppins', fontSize: 16.0, color: Colors.white),
-  // bodyMedium:
-  //     TextStyle(fontFamily: 'Poppins', fontSize: 24.0, color: Colors.white),
-  // bodyLarge:
-  //     TextStyle(fontFamily: 'Poppins', fontSize: 32.0, color: Colors.white),
+  bodySmall:
+      TextStyle(fontFamily: 'OpenSans', fontSize: 16.0, color: Colors.white),
+  bodyMedium:
+      TextStyle(fontFamily: 'OpenSans', fontSize: 24.0, color: Colors.white),
+  bodyLarge:
+      TextStyle(fontFamily: 'OpenSans', fontSize: 32.0, color: Colors.white),
 );

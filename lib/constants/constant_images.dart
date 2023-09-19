@@ -1,1 +1,1 @@
-const String carImageOne = 'assets/images/car1.jpg';
+const String carImageOne = 'assets/images/car1.jpeg';

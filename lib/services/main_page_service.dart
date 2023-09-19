@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:rent_me/app_manager.dart';
 import 'package:rent_me/constants/constant_colors.dart';
-import 'package:rent_me/constants/constant_images.dart';
 import 'package:rent_me/constants/constant_sizes.dart';
+import 'package:rent_me/widgets/offer_widget.dart';
 
 Widget getMainPageBody() {
   return SingleChildScrollView(
     child: Container(
-      padding: const EdgeInsets.all(allPaddingDefault),
+      padding: const EdgeInsets.all(defaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -19,11 +19,11 @@ Widget getMainPageBody() {
           const SizedBox(
             height: spaceSizedBoxHeight,
           ),
-          _getSpecialOffertsContainer(),
+          _getSpecialOffersContainer(),
           const SizedBox(
             height: spaceSizedBoxHeight,
           ),
-          _getSuggestedOfferts(),
+          _getSuggestedOffers(),
         ],
       ),
     ),
@@ -48,16 +48,15 @@ Widget _getSearchBar() {
             size: 30,
           ),
         ),
-        const SizedBox(
-          width: 5,
+        Text("Wyszukaj...",
+        style: AppManager.textTheme.bodySmall,
         ),
-        const Text("Wyszukaj..."),
       ],
     ),
   );
 }
 
-Widget _getSpecialOffertsContainer() {
+Widget _getSpecialOffersContainer() {
   return Container(
     width: double.infinity,
     height: AppManager.appSize.height * 0.23,
@@ -98,7 +97,7 @@ Widget _getSpecialOffertsContainer() {
   );
 }
 
-Widget _getSuggestedOfferts() {
+Widget _getSuggestedOffers() {
   return SizedBox(
     width: double.infinity,
     child: ListView.builder(
@@ -106,12 +105,7 @@ Widget _getSuggestedOfferts() {
       shrinkWrap: true,
       itemCount: 3,
       itemBuilder: (context, index) {
-        return const SizedBox(
-          width: 200,
-          child: Image(
-            image: AssetImage(carImageOne),
-          ),
-        );
+        return const OfferWidget();
       },
     ),
   );
