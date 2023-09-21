@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:rent_me/app_manager.dart';
 import 'package:rent_me/constants/constant_colors.dart';
 import 'package:rent_me/constants/constant_sizes.dart';
-import 'package:rent_me/widgets/offer_widget.dart';
+import 'package:rent_me/widgets/main_page/offer_widget.dart';
+import 'package:rent_me/widgets/search_bar_widget.dart';
+
+TextEditingController _searchController = TextEditingController();
 
 Widget getMainPageBody() {
   return SingleChildScrollView(
@@ -15,7 +18,7 @@ Widget getMainPageBody() {
           const SizedBox(
             height: spaceSizedBoxHeight,
           ),
-          _getSearchBar(),
+          getSearchBar(textController: _searchController),
           const SizedBox(
             height: spaceSizedBoxHeight,
           ),
@@ -26,32 +29,6 @@ Widget getMainPageBody() {
           _getSuggestedOffers(),
         ],
       ),
-    ),
-  );
-}
-
-Widget _getSearchBar() {
-  return Container(
-    width: double.infinity,
-    height: AppManager.appSize.height * 0.07,
-    decoration: BoxDecoration(
-        border: Border.all(
-          color: secondaryColor,
-        ),
-        borderRadius: BorderRadius.circular(defaultContainerBorderRadius)),
-    child: Row(
-      children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.search_rounded,
-            size: 30,
-          ),
-        ),
-        Text("Wyszukaj...",
-        style: AppManager.textTheme.bodySmall,
-        ),
-      ],
     ),
   );
 }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rent_me/app_manager.dart';
+import 'package:rent_me/constants/constant_colors.dart';
 import 'package:rent_me/constants/constant_images.dart';
 import 'package:rent_me/constants/constant_sizes.dart';
+import 'package:rent_me/routes/routes.dart';
 
 class OfferWidget extends StatefulWidget {
   const OfferWidget({super.key});
@@ -14,16 +17,14 @@ class _OfferWidgetState extends State<OfferWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        debugPrint("open offert");
-      },
+      onTap: () => Get.toNamed(Routes.getOfferPageRoute()),
       child: Container(
         width: double.infinity,
         height: defaultOfferBlockHeight,
         margin: const EdgeInsets.only(bottom: defaultOfferBlockMargin),
         padding: const EdgeInsets.all(defaultPadding - 10),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.black),
+          border: Border.all(color: secondaryColor.withAlpha(100)),
           borderRadius: BorderRadius.circular(defaultContainerBorderRadius),
         ),
         child: Column(
@@ -69,7 +70,8 @@ class _OfferWidgetState extends State<OfferWidget> {
               height: spaceSizedBoxHeight - 5,
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
               width: 300,
               child: Text(
                 "Mercedes-Benz AMG GT Klasa E",
@@ -81,7 +83,8 @@ class _OfferWidgetState extends State<OfferWidget> {
               height: spaceSizedBoxHeight - 10,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -101,7 +104,8 @@ class _OfferWidgetState extends State<OfferWidget> {
               height: spaceSizedBoxHeight - 10,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [

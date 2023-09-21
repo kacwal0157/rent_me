@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:rent_me/constants/constant_enums.dart';
+import 'package:rent_me/services/bottom_nav_buttons_service.dart';
 
 Row getBottomNavBar() => Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         _getIconBtn(
           iconData: Icons.home_rounded,
-          onPressed: () {
-            debugPrint("HOME");
-          },
+          onPressed: () => getBottomNavBtnAction(BottomNavBtn.home),
         ),
         _getIconBtn(
           iconData: Icons.search_rounded,
-          onPressed: () {
-            debugPrint("SEARCH");
-          },
+          onPressed: () => getBottomNavBtnAction(BottomNavBtn.search),
         ),
         _getIconBtn(
           iconData: Icons.favorite_rounded,

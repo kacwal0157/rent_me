@@ -1,0 +1,5 @@
+enum BottomNavBtn
+{
+  home,
+  search,
+}
