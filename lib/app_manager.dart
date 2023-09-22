@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rent_me/model/category_filter.dart';
 
 class AppManager {
   AppManager._();
@@ -9,5 +10,8 @@ class AppManager {
 
   //*SEARCH
   static List<String> searchHistory = [];
-  static VoidCallback searchPageCallback = (){};
+  static VoidCallback searchPageCallback = () {};
+
+  //*CATEGORY FILTERS
+  static Map<String, CategoryFilter> categoryFilters = {};
 }

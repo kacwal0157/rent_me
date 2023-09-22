@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rent_me/app_manager.dart';
 import 'package:rent_me/components/app_bar.dart';
 import 'package:rent_me/components/bottom_nav_bar.dart';
+import 'package:rent_me/services/json_files_service.dart';
 import 'package:rent_me/widgets/main_page/main_page_widgets.dart';
 
 class MainPage extends StatefulWidget {
@@ -12,6 +13,12 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  @override
+  void initState() {
+    getJsonFiles();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     AppManager.appSize = MediaQuery.of(context).size;

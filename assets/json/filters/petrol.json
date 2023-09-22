@@ -1,0 +1,11 @@
+{
+    "filterTitle": "Paliwo",
+    "filterOptions":
+    [
+        "Wszystkie typy",
+        "Benzyna",
+        "Diesel",
+        "Gas",
+        "Elektryk"
+    ]
+}
